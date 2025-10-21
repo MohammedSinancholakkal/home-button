@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "../styles/AboutUs.css";
+import "../styles/Aboutus.css";
 import aboutusImg1 from "../assets/aboutusimg1.jpg";
 
 function AboutUs() {
