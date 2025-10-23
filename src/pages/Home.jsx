@@ -8,7 +8,7 @@ import leaderthree from "../assets/leader3.png";
 import { Link } from "react-router-dom";
 import img1 from "../assets/imgnew1.png";
 import img2 from "../assets/imgnew2.png";
-import img3 from "../assets/imgnew3.png";
+import img4 from "../assets/imgnew4.png";
 
 function Home() {
   const fullText = "Home Button";
@@ -108,7 +108,7 @@ useEffect(() => {
         <div className="floating-shape shape2"></div>
         <div className="floating-shape shape3"></div>
 
-        <Container>
+        <Container> 
           <Row className="align-items-center">
             <Col md={6} className="text-section text-light">
               <h1 className="display-4 fw-bold mb-3 animate-fade-left">{displayedText}</h1>
@@ -117,12 +117,16 @@ useEffect(() => {
                 World Class ERP and CRM Solutions. Hire our expertise to build your next big idea.
               </p>
               <div className="d-flex gap-3 animate-fade-left delay-2">
-                <Button variant="info" className="px-4 py-2 fw-semibold btn-glow text-light">
+               <Link to={'/services#software-section-insight'}>
+               <Button  className="px-4 py-2 fw-semibold btn-glow text-light">
                   Explore Services
                 </Button>
-                <Button variant="outline-info" className="px-4 py-2 fw-semibold text-light border-light btn-outline-glow">
+               </Link>
+               <Link to={'/contactus'}>
+               <Button variant="outline-info" className="px-4 py-2 fw-semibold text-light border-light btn-outline-glow">
                   Get Started
                 </Button>
+               </Link>
               </div>
             </Col>
 
@@ -251,7 +255,7 @@ useEffect(() => {
     <div className="section-header mt-3">
       <h2>Empower Your Organization</h2>
       <p>Modern tools to automate, control, and streamline your workflows.</p>
-      <a href="#" className="learn-more">
+      <a href="/products" className="learn-more">
           Learn more →
         </a>
     </div>
@@ -263,8 +267,8 @@ useEffect(() => {
         <p>
         Smart web technologies to create, manage, and scale websites that stand out online.
         </p>
-        <a href="#" className="learn-more">
-          Learn more →
+        <a href="/products" className="learn-more">
+        Learn more →
         </a>
       </div>
 
@@ -292,7 +296,7 @@ useEffect(() => {
       that scale effortlessly with your traffic.
       </p>
 
-        <a href="#" className="learn-more">
+      <a href="/products" className="learn-more">
           Learn more →
         </a>
       </div>
@@ -300,21 +304,23 @@ useEffect(() => {
 
        {/* ===== third Content Block ===== */}
        <div className="policy-block mt-5">
-      <div className="policy-text">
-      <h3>Smart databases built for efficiency.</h3>
+       <div className="policy-text">
+        <h3>Smart cloud solutions built for scalability.</h3>
         <p>
-        Create and manage data systems that update, secure, and optimize themselves — 
-        helping your websites and applications run seamlessly.
+          Deploy, manage, and scale your infrastructure effortlessly in the cloud — 
+          with built-in automation, security, and real-time performance optimization 
+          that keeps your systems running at peak efficiency.
         </p>
 
-        <a href="#" className="learn-more">
+        <a href="/products" className="learn-more">
           Learn more →
         </a>
       </div>
 
+
       <div className="policy-image">
         <img
-          src={img3}
+          src={img4}
           alt="Team working late"
         />
       </div>

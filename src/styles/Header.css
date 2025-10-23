@@ -22,13 +22,14 @@
   color: #7986cb;
   text-shadow: 0 0 10px #7986cb, 0 0 20px #5c6bc0;
 }
-
+ 
 /* Navbar links glow */
 .nav-link-glow {
-  color: #ffffffcc;
-  font-weight: bolder;
+  color: #ffffff;
+  font-size: 18px;
   transition: all 0.3s ease;
   text-decoration: none;
+  margin: 8px;
 }
 
 .nav-link-glow:hover {
@@ -42,6 +43,8 @@
   color: #ffffff !important;
   border: none;
   transition: all 0.3s ease;
+  width: 150px;
+  height: 50px;
 }
 
 .btn-glow:hover {
@@ -231,3 +234,55 @@
   }
 }
 
+/* 🌈 Gradient Button */
+.btn-gradient {
+  background: linear-gradient(90deg, #5c6bc0, #7986cb);
+  border: none;
+  padding: 8px 18px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-gradient:hover {
+  box-shadow: 0 0 12px rgba(121, 134, 203, 0.7);
+  transform: translateY(-2px);
+}
+
+/* 🔍 Search Bar Styling */
+.search-box {
+  position: relative;
+}
+
+.search-input {
+  padding: 8px 14px 8px 36px;
+  border-radius: 25px;
+  border: 1px solid #7986cb;
+  background: #f7f8ff;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 10px #7986cb;
+  border-color: #5c6bc0;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  color: #5c6bc0;
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .search-input {
+    width: 150px;
+  }
+}
+ 

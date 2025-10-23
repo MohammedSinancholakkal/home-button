@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
 import "../styles/Footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -14,7 +15,7 @@ function Footer() {
             We provide customised, reliable and cost effective solutions for all your business needs.
             </p>
             <div className="social-icons">
-              <a href="#"><FaTwitter /></a>
+              <a href="#"><FaYoutube /></a>
               <a href="#"><FaFacebookF /></a>
               <a href="#"><FaInstagram /></a>
               <a href="#"><FaLinkedinIn /></a>
@@ -24,20 +25,21 @@ function Footer() {
           <Col md={2}>
             <h5 className="footer-subtitle">Useful Links</h5>
             <ul className="footer-links">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Products</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Learning</a></li>
-              <li><a href="#">Support</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/aboutus">About Us</a></li>
+              <li><a href="/products">Products</a></li>
+              <li><a href="/contactus">Contact</a></li>
             </ul>
           </Col>
 
           <Col md={3}>
             <h5 className="footer-subtitle">Our Services</h5>
             <ul className="footer-links">
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Cloud Solutions</a></li>
-              <li><a href="#">IT Consulting</a></li>
+              <li><Link to="/services#software-section-insight">ERP Software</Link></li>
+              <li><Link to="/services#software-section-insight">CRM Software</Link></li>
+              <li><Link to="/services#software-section-insight">Salesforce Customisation</Link></li>
+              <li><Link to="/services#software-section-insight">Custom Software for Business</Link></li>
             </ul>
           </Col>
 
@@ -49,14 +51,15 @@ function Footer() {
               CSEZ P.O, Kakkanad, Eranakulam - 682037<br />
               
             </p>
-            <p><strong>Phone:</strong> +91 7708461256</p>
+            <p><strong>Phone:</strong> +91 9629794999</p>
+            <p><strong>Land No:</strong>+91 484-2977886</p>
             <p><strong>Email:</strong>homebuttonpvtltd@gmail.com</p>
           </Col>
         </Row>
 
         <div className="footer-bottom text-center mt-4">
           <p>
-            © {new Date().getFullYear()} <span>Home Button Pvt Ltd</span>. All Rights Reserved.
+            © Copyright <span>Home Button Tech. Pvt .Ltd</span>. All Rights Reserved.
           </p>
         </div>
       </Container>

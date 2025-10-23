@@ -1,0 +1,469 @@
+/* ===== Services Banner Section ===== */
+.services-banner-section {
+  position: relative;
+  background: url("../assets/servicebanner1.avif") center/cover no-repeat;
+  color: #fff;
+  min-height: 70vh;
+  display: flex;
+  align-items: center; /* vertical center */
+  justify-content: flex-start; /* align to left */
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  padding: 0 10%; /* spacing from left side */
+}
+
+/* Dark Overlay */
+.services-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 12, 40, 0.6);
+  z-index: 1;
+} 
+
+/* Banner Content */
+.services-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  text-align: left; /* align text to left */
+}
+
+.services-banner-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff; /* theme color */
+  margin-bottom: 1rem;
+}
+
+.services-banner-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+/* Button */
+.services-btn {
+  background: #7986cb;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.services-btn:hover {
+  background: #5c6bc0;
+  box-shadow: 0 0 12px #7986cb;
+  transform: translateY(-3px);
+}
+
+/* ===== Fade Animation ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.fade-up.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.fade-up.delay-2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .services-banner-section {
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .services-banner-content {
+    text-align: center;
+  }
+
+  .services-banner-content h1 {
+    font-size: 2rem;
+  }
+
+  .services-banner-content p {
+    font-size: 1rem;
+  }
+
+  .services-btn {
+    padding: 10px 22px;
+    font-size: 0.95rem;
+  }
+}
+
+  
+
+
+
+  
+/* Service Section */
+.services-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: 60px !important; /* reduced space */
+  padding: 0 1rem;
+}
+
+.services-section {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.services-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* Grid Layout — 3 per row on large, auto-fit on small */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Card Design */
+.service-card {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.service-card .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Tablets (≤ 992px) → 2 per row */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile (≤ 576px) → 1 per row */
+@media (max-width: 576px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .service-card {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+/* up arrow button  */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #7986cb; 
+  color: #fff;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background: #526cff; 
+
+  transform: translateY(-5px);
+}
+
+
+/* ===== Scroll Animation for Services Section ===== */
+
+.services-container {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s ease-out;
+}
+
+/* When the section becomes visible */
+.services-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth stagger animation for each card */
+.service-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+  font-weight: 500;
+
+}
+
+.services-container.visible .service-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.services-container.visible .service-card:nth-child(1) { transition-delay: 0.1s; }
+.services-container.visible .service-card:nth-child(2) { transition-delay: 0.2s; }
+.services-container.visible .service-card:nth-child(3) { transition-delay: 0.3s; }
+.services-container.visible .service-card:nth-child(4) { transition-delay: 0.4s; }
+.services-container.visible .service-card:nth-child(5) { transition-delay: 0.5s; }
+.services-container.visible .service-card:nth-child(6) { transition-delay: 0.6s; }
+
+/* Optional hover effect for better UX */
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+/* Reset transition delay when hovering */
+.service-card:hover {
+  transition-delay: 0s !important;
+  cursor: pointer;
+}
+.service-card:hover {
+  background-color: #ffffff;
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  transition-delay: 0s !important;
+}
+.service-card:hover h3,
+.service-card:hover .icon {
+  color: #0020c0 !important; /* same as your button color */
+  transition: color 0.3s ease;
+}
+
+.service-card h3{
+  font-weight: bolder;
+
+}
+
+
+
+
+
+/* ===== Service Insights Section ===== */
+.software-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  background-color: #f7fafd;
+  padding: 60px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: auto;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* ===== Section Heading ===== */
+.software-heading {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.software-heading h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4353a5, #7986cb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.software-heading p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+/* ===== Cards ===== */
+.software-card {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.8s ease-out;
+}
+
+.software-image {
+  width: 40%;
+  object-fit: cover;
+}
+
+.software-content {
+  flex: 1;
+  padding: 25px;
+}
+
+.software-content h3 {
+  color: #002b5c;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.software-content p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ===== When Visible (Scroll Animation Active) ===== */
+.software-section.visible .software-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.software-section.visible .software-heading h2,
+.software-section.visible .software-heading p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Staggered Animation Delay ===== */
+.software-section.visible .software-heading h2 { transition-delay: 0.1s; }
+.software-section.visible .software-heading p { transition-delay: 0.3s; }
+.software-section.visible .software-card:nth-child(2) { transition-delay: 0.5s; }
+.software-section.visible .software-card:nth-child(3) { transition-delay: 0.7s; }
+.software-section.visible .software-card:nth-child(4) { transition-delay: 0.9s; }
+.software-section.visible .software-card:nth-child(5) { transition-delay: 1.1s; }
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .software-section {
+    grid-template-columns: 1fr;
+    width: 95%;
+    padding: 40px 20px;
+  }
+
+  .software-card {
+    flex-direction: column;
+  }
+
+  .software-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .software-heading h2 {
+    font-size: 1.9rem;
+  }
+
+  .software-heading p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== Glass Shine Animation ===== */
+.software-card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.software-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  animation: shine 3.5s infinite;
+  opacity: 0.7;
+}
+
+/* ===== Smooth Shine Animation ===== */
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  50% {
+    left: 125%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+/* ===== Hover Enhancement (optional) ===== */
+.software-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}

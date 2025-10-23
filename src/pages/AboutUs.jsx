@@ -1,6 +1,16 @@
 import { useEffect } from "react";
 import "../styles/Aboutus.css";
 import aboutusImg1 from "../assets/aboutusimg1.jpg";
+import whychooseImg from "../assets/whychooseimg1.jpg";
+import { Container, Row, Col } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import React from "react";
+import { Link, Links } from "react-router-dom";
+
+// import works1 from "../assets/works1.jpg";
+// import works2 from "../assets/works2.jpg";
+// import works3 from "../assets/works3.jpg";
+
 
 function AboutUs() {
   useEffect(() => {
@@ -34,16 +44,19 @@ function AboutUs() {
             Our journey is built on innovation, integrity, and a passion for creating
             solutions that inspire growth and success.
           </p>
-          <button
+        <Link to={'/contactus'}>
+        <button
             className="fade-up delay-2 about-btn"
             onClick={() => {
               document
                 .getElementById("about-section")
                 ?.scrollIntoView({ behavior: "smooth" });
+                
             }}
           >
             Learn More
           </button>
+        </Link>
         </div>
       </section>
 
@@ -82,6 +95,161 @@ function AboutUs() {
 
   </div>
 </section>
+
+
+
+ {/* ===== Why Choose Us Section ===== */}
+ <section className="why-choose-section py-5">
+        <Container>
+          <Row className="align-items-center row">
+            {/* Left Content */}
+            <Col md={6} className="reveal-on-scroll">
+              <h2 className="why-title">Why Choose Us</h2>
+              <p className="why-desc">
+                At Chilla Solutions, we focus on delivering measurable impact through
+                cutting-edge digital solutions. We believe in innovation with intent —
+                every project we take on is aimed at improving efficiency, scalability, and user experience.
+              </p>
+              <ul className="why-points">
+                <li> Customized software tailored to your business needs</li>
+                <li> Transparent communication and on-time delivery</li>
+                <li> Experienced professionals with diverse domain expertise</li>
+                <li> Ongoing support and long-term client partnerships</li>
+              </ul>
+            </Col>
+
+            {/* Right Image */}
+            <Col md={6} className="text-center reveal-on-scroll">
+              <img
+                src={whychooseImg}
+                alt="Why Choose Us"
+                className="why-image img-fluid rounded shadow"
+              />
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+
+
+            {/* ===== Works We Have Done Section ===== */}
+            {/* <section className="works-section">
+        <Container>
+          <h2 className="section-title text-center">Works We Have Done</h2>
+          <p className="text-center section-subtitle">
+            A glimpse of our recent projects that transformed our clients’ businesses.
+          </p>
+          <Row>
+            <Col md={4} sm={6} xs={12} className="mb-4 reveal-on-scroll delay-1">
+              <Card className="work-card">
+                <Card.Img variant="top" src="" />
+                <Card.Body>
+                  <Card.Title>E-Commerce Platform</Card.Title>
+                  <Card.Text>
+                    A scalable online shopping experience built with React and Node.js.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4} sm={6} xs={12} className="mb-4 reveal-on-scroll delay-2">
+              <Card className="work-card">
+                <Card.Img variant="top" src=""/>
+                <Card.Body>
+                  <Card.Title>Business Automation App</Card.Title>
+                  <Card.Text>
+                    Streamlining daily operations with AI-powered dashboards and analytics.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4} sm={6} xs={12} className="mb-4 reveal-on-scroll delay-3">
+              <Card className="work-card">
+                <Card.Img variant="top" src="" />
+                <Card.Body>
+                  <Card.Title>Travel Booking Portal</Card.Title>
+                  <Card.Text>
+                    A seamless travel experience integrating secure payment systems.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </section> */}
+
+
+
+      {/* get in touch */}
+      <section className="contact-cta-section">
+      <Container>
+        <Row className="align-items-center justify-content-between">
+          <Col md={8} sm={12} className="cta-text">
+            <h2>Let’s Build Something Great Together</h2>
+            <p>
+              Have a project in mind or want to learn more about our services? 
+              Reach out to us and our team will get back to you shortly.
+            </p>
+          </Col>
+          <Col md={4} sm={12} className="text-md-end text-center mt-3 mt-md-0">
+           <Link to={'/contactus'}> <Button className="cta-btn">
+              Get in Touch <span className="arrow">→</span>
+            </Button></Link>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+
+
+            {/* brand section */}
+            <section className="trusted-section container mt-5">
+      <h2 className="heading">Trusted by companies around the globe</h2>
+
+      <div className="logo-slider mb-5">
+        <div className="logo-track mt-5">
+          {/* Repeat all logos twice to make it loop seamlessly */}
+          {[...Array(2)].map((_, i) => (
+            <React.Fragment key={i}>
+              <div className="logo-item">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Celso_logotipo_blue.jpg"
+                  alt="celsa "
+                />
+              </div>
+              <div className="logo-item">
+                <img
+                  src="https://brandeps.com/logo-download/S/Shimano-logo-01.png"
+                  alt="shimano"
+                />
+              </div>
+              <div className="logo-item">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUOCkRJbhFJu5OJ8Dg3t4jRXfxborMwRcn9Q&s"
+                  alt="Shimano"
+                />
+              </div>
+              <div className="logo-item">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdUIhQCTegyuo6ZuTmrG8m2Qt73AXaVN9z2w&s"
+                  alt="PureTech"
+                />
+              </div>
+              <div className="logo-item">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Chiesi_Logo_-_1.Primary_pantoni_RGB.jpg/1200px-Chiesi_Logo_-_1.Primary_pantoni_RGB.jpg"
+                  alt="Chiesi"
+                />
+              </div>
+              <div className="logo-item">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/3/32/BANK_ISLAM_LOGO.jpg"
+                  alt="Bank Islam"
+                />
+              </div>
+            </React.Fragment>
+          ))}
+        </div>
+      </div>
+    </section>
 
     </>
   );

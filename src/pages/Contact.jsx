@@ -203,7 +203,7 @@ function Contact() {
 
 
             {/* Map Section */}
-            <section className="map-section d-flex gap-1">
+      <section className="map-section d-flex gap-1">
         {/* Left Side */}
         <div className="map-left">
           <div className="slash-shape"></div>
@@ -216,25 +216,27 @@ function Contact() {
               We’d love to meet you! Stop by our office or reach out to schedule a visit.
             </p>
             <div className="contact-info">
-              <p><i className="fa-solid fa-phone"></i> +1 (408) 555-7890</p>
+              <p><i className="fa-solid fa-phone"></i>+91 9629794999</p>
+              <p><i className="fa-solid fa-phone"></i>+91 484-2977886</p>
               <p><i className="fa-solid fa-envelope"></i> homebuttonpvtltd@gmail.com</p>
             </div>
           </div>
         </div>
 
         {/* Right Side - Google Map */}
-        <div className="map-right">
+        <div className="map-right" style={{ height: "450px" }}>
           <iframe
             title="Company Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.427893760857!2d-122.08385148468264!3d37.42206597982598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba03a5b4e4b5%3A0x2b8f7ec20b9a1e6!2sGoogleplex!5e0!3m2!1sen!2sus!4v1675905053339!5m2!1sen!2sus"
+            src="https://www.google.com/maps?q=10.00878,76.34253&hl=es;z=17&output=embed"
             width="100%"
             height="100%"
             style={{ border: 0 }}
-            allowFullScreen=""
+            allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+
       </section>
 
       {/* Contact Info Section */}
@@ -254,7 +256,8 @@ function Contact() {
           <div className="info-card fade-in-up">
           <i className="fa-solid fa-comment-dots"></i>
             <h3>Contact Us</h3>
-            <p>Phone: +91 7708461256</p>
+            <p>Phone: +91 9629794999</p>
+            <p>Land No: +91 484-2977886</p>
             <p>homebuttonpvtltd@gmail.com</p>
             <p>Mon - Fri, 9am - 6pm</p>
           </div>
@@ -265,7 +268,7 @@ function Contact() {
             <div className="social-icons-contact">
               <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
               <a href="#"><i className="fa-brands fa-linkedin-in"></i></a>
-              <a href="#"><i className="fa-brands fa-twitter"></i></a>
+              <a href="#"><i className="fa-brands fa-youtube"></i></a>
               <a href="#"><i className="fa-brands fa-instagram"></i></a>
             </div>
           </div>

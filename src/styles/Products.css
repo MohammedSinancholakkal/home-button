@@ -1,0 +1,234 @@
+/* ===== Products Banner Section ===== */
+.products-banner-section {
+    position: relative;
+    background: url("https://www.silvertouch.ca/wp-content/uploads/2022/11/erp.png") center/cover no-repeat;
+    color: #fff;
+    min-height: 70vh;
+    display: flex;
+    align-items: center; /* vertical center */
+    justify-content: flex-start; /* align to left */
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    padding: 0 10%; /* spacing from left side */
+  }
+  
+  /* Dark Overlay */
+  .products-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 12, 40, 0.6);
+    z-index: 1;
+  }
+  
+  /* Banner Content */
+  .products-banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    text-align: left; /* align text to left */
+  }
+  
+  .products-banner-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff; /* theme color */
+    margin-bottom: 1rem;
+  }
+  
+  .products-banner-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+  }
+  
+  /* Button */
+  .products-btn {
+    background: #7986cb;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .products-btn:hover {
+    background: #5c6bc0;
+    box-shadow: 0 0 12px #7986cb;
+    transform: translateY(-3px);
+  }
+  
+  /* ===== Fade Animation ===== */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
+  }
+  
+  .fade-up.delay-1 {
+    animation-delay: 0.3s;
+  }
+  
+  .fade-up.delay-2 {
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    .products-banner-section {
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+  
+    .products-banner-content {
+      text-align: center;
+    }
+  
+    .products-banner-content h1 {
+      font-size: 2rem;
+    }
+  
+    .products-banner-content p {
+      font-size: 1rem;
+    }
+  
+    .products-btn {
+      padding: 10px 22px;
+      font-size: 0.95rem;
+    }
+  }
+  
+  
+
+.blog-section {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 60px 20px;
+    /* background: linear-gradient(90deg, #a1c4fd 0%, #c2e9fb 50%, #b3c0f7 100%); */
+    flex-wrap: wrap;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .blog-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 390px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-6px);
+  }
+  
+  .blog-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .blog-content {
+    padding: 18px;
+    text-align: left;
+  }
+  
+  .blog-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .blog-tag.tech {
+    background: #7986cb;
+  }
+  
+  .blog-tag.food {
+    background:  #7986cb;
+  }
+  
+  .blog-tag.auto {
+    background:  #7986cb;
+  }
+  
+  .blog-content h3 {
+    margin: 6px 0;
+    font-size: 1.1rem;
+    color: #1e1e1e;
+  }
+  
+  .blog-content p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .author {
+    font-size: 0.8rem;
+    margin-top: 12px;
+    color: #777;
+  }
+  /* --- Glising Glass Effect --- */
+.blog-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 390px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .blog-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    animation: glisten 5s infinite linear 1s; /* 5s speed, 2s delay */
+    pointer-events: none;
+  }
+  
+  
+  @keyframes glisten {
+    0% {
+      left: -150%;
+    }
+    100% {
+      left: 150%;
+    }
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-6px);
+  }
+  .blog-header{
+    color: #7986cb;
+  }
+  

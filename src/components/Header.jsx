@@ -3,7 +3,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { Nav, Navbar, Button } from "react-bootstrap";
 import "../styles/Header.css";
 
-function Header() {
+function Header({ searchQuery, setSearchQuery }) {
   const [expanded, setExpanded] = useState(false);
   const navRef = useRef(null);
   const location = useLocation();
@@ -11,7 +11,11 @@ function Header() {
   // ✅ Close navbar when clicking outside
   useEffect(() => {
     const handleOutsideClick = (event) => {
-      if (expanded && navRef.current && !navRef.current.contains(event.target)) {
+      if (
+        expanded &&
+        navRef.current &&
+        !navRef.current.contains(event.target)
+      ) {
         setExpanded(false);
       }
     };
@@ -32,7 +36,7 @@ function Header() {
       onToggle={setExpanded}
       className="custom-header px-4"
     >
-      <section className="container-fluid d-flex align-items-center justify-content-between">
+      <section className="container-fluid d-flex align-items-center">
         {/* Brand */}
         <Navbar.Brand className="brand-glow">Home Button</Navbar.Brand>
 
@@ -53,7 +57,6 @@ function Header() {
             >
               Home
             </NavLink>
-
             <NavLink
               to="/services"
               className={({ isActive }) =>
@@ -70,16 +73,14 @@ function Header() {
             >
               About Us
             </NavLink>
-
             <NavLink
-              to="/products"
+              to="/products" 
               className={({ isActive }) =>
                 `nav-link-glow ${isActive ? "active" : ""}`
               }
             >
               Products
             </NavLink>
-
             <NavLink
               to="/contactus"
               className={({ isActive }) =>
@@ -88,23 +89,21 @@ function Header() {
             >
               Contact
             </NavLink>
-
-            <NavLink
-              to="/portfolio"
-              className={({ isActive }) =>
-                `nav-link-glow ${isActive ? "active" : ""}`
-              }
-            >
-              Portfolio
-            </NavLink>
           </Nav>
 
-          {/* Right-side buttons */}
-          <div className="ms-auto d-flex gap-2 justify-content-center flex-wrap mt-3 mt-lg-0">
-            <Button variant="info" className="btn-glow text-light">
-              <i className="fa-solid fa-globe"></i>
-            </Button>
+          {/* <div className="ms-auto d-flex align-items-center gap-3 justify-content-center flex-wrap mt-3 mt-lg-0">
+           
+          <div className="search-box d-flex align-items-center">
+            <input
+              type="text"
+              className="search-input"
+              placeholder="Search..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <i className="fa-solid fa-magnifying-glass search-icon"></i>
           </div>
+          </div> */}
         </Navbar.Collapse>
       </section>
     </Navbar>
