@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "../styles/Home.css";
-import heroImage from "../assets/heroImage1new.png";
+import heroImage from "../assets/heroimage1new.png";
 import leaderOne from "../assets/leader1.png";
 import leadertwo from "../assets/leader2.png";
 import leaderthree from "../assets/leader3.png";
