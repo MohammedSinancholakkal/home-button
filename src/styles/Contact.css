@@ -201,7 +201,7 @@
   
   .hero-section {
     width: 100%;
-    background: url("../assets/contactBanner3.jpg") center/cover no-repeat;
+    background: url("https://omlogisticssupplychain.com/images/Contact-Us-Banner.svg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -218,7 +218,7 @@
     left: 0;
     width: 100%;
     height: 500px;
-    background: linear-gradient(to right, rgba(255,255,255,0.9) 40%, rgba(255,255,255,0.2) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.671) 40%, rgba(255,255,255,0.2) 100%);
     z-index: 0;
   }
   
@@ -304,7 +304,6 @@
 /* ================================================
    🌍 MAP SECTION - FULLY RESPONSIVE + BALANCED
 ================================================ */
-
 .map-section {
   display: flex;
   width: 100%;
@@ -325,11 +324,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5px;
   border-radius: 12px 0 0 12px;
   transition: all 0.3s ease;
 }
 
+/* Dark overlay */
 .map-left::before {
   content: "";
   position: absolute;
@@ -347,34 +346,14 @@
   padding: 30px;
 }
 
-.map-overlay h2 {
-  font-size: 1.8rem;
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-.map-overlay p {
-  font-size: 1rem;
-  color: #ddd;
-  margin: 6px 0;
-}
-
-.map-overlay .desc {
-  margin-top: 12px;
-  font-size: 0.95rem;
-  color: #cfcfcf;
-  line-height: 1.5;
-}
-
 /* ===== Right Side (Google Map) ===== */
 .map-right {
   flex: 0 0 70%;
   height: 100%;
   border-radius: 0 12px 12px 0;
   overflow: hidden;
-  margin: 5px;
   display: flex;
-  align-items: stretch;
+  align-items: center;
 }
 
 .map-right iframe {
@@ -385,6 +364,7 @@
   object-fit: cover;
   transition: all 0.3s ease;
 }
+
 
 /* ================================================
    📱 RESPONSIVE DESIGN
@@ -636,7 +616,7 @@
   
   
 
-
+ 
   /* contact section */
 
 /* ===== Info Section (Light Background, Gradient Cards) ===== */

@@ -15,11 +15,12 @@ function Footer() {
             We provide customised, reliable and cost effective solutions for all your business needs.
             </p>
             <div className="social-icons">
-              <a href="#"><FaYoutube /></a>
-              <a href="#"><FaFacebookF /></a>
-              <a href="#"><FaInstagram /></a>
-              <a href="#"><FaLinkedinIn /></a>
-            </div>
+            <a href="#" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
+          </div>
+
           </Col>
 
           <Col md={2}>

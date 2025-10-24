@@ -203,41 +203,41 @@ function Contact() {
 
 
             {/* Map Section */}
-      <section className="map-section d-flex gap-1">
-        {/* Left Side */}
-        <div className="map-left">
-          <div className="slash-shape"></div>
-          <div className="map-overlay">
-            <h2>Visit Our Office</h2>
-            No 24/1701, Suit No: 821, <br /> Heiley offices 2nd floor<br />             
-              KC Arcade, Near TV center,<br />
-              CSEZ P.O, Kakkanad, Eranakulam - 682037<br />
-            <p className="desc">
-              We’d love to meet you! Stop by our office or reach out to schedule a visit.
-            </p>
-            <div className="contact-info">
-              <p><i className="fa-solid fa-phone"></i>+91 9629794999</p>
-              <p><i className="fa-solid fa-phone"></i>+91 484-2977886</p>
-              <p><i className="fa-solid fa-envelope"></i> homebuttonpvtltd@gmail.com</p>
-            </div>
-          </div>
-        </div>
+            <section className="map-section d-flex gap-1">
+  {/* Left Side */}
+  <div className="map-left">
+    <div className="slash-shape"></div>
+    <div className="map-overlay">
+      <h2>Visit Our Office</h2>
+      No 24/1701, Suit No: 821, <br /> Heiley offices 2nd floor<br />             
+      KC Arcade, Near TV center,<br />
+      CSEZ P.O, Kakkanad, Eranakulam - 682037<br />
+      <p className="desc">
+        We’d love to meet you! Stop by our office or reach out to schedule a visit.
+      </p>
+      <div className="contact-info">
+        <p><i className="fa-solid fa-phone"></i>+91 9629794999</p>
+        <p><i className="fa-solid fa-phone"></i>+91 484-2977886</p>
+        <p><i className="fa-solid fa-envelope"></i> homebuttonpvtltd@gmail.com</p>
+      </div>
+    </div>
+  </div>
 
-        {/* Right Side - Google Map */}
-        <div className="map-right" style={{ height: "450px" }}>
-          <iframe
-            title="Company Location"
-            src="https://www.google.com/maps?q=10.00878,76.34253&hl=es;z=17&output=embed"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+  {/* Right Side - Google Map */}
+  <div className="map-right">
+    <iframe
+      title="Company Location"
+      src="https://www.google.com/maps?q=10.00878,76.34253&hl=es;z=17&output=embed"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</section>
 
-      </section>
 
       {/* Contact Info Section */}
   <section className="info-section">
@@ -278,7 +278,7 @@ function Contact() {
 
       {/* CTA Section */}
       <section className="hero-section">
-        <div className="hero-content">
+        <div className="hero-content"> 
           <div className="text-content">
             <h2><span>Are you ready</span></h2>
             <h1>Let’s Make Something <br /> Amazing Together</h1>

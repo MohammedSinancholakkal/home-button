@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "../styles/Home.css";
-import heroImage from "../assets/bannernew1.png";
+import heroImage from "../assets/heroImage1new.png";
 import leaderOne from "../assets/leader1.png";
 import leadertwo from "../assets/leader2.png";
 import leaderthree from "../assets/leader3.png";
@@ -27,7 +27,7 @@ function Home() {
 
     return () => clearInterval(interval);
   }, []);
-
+ 
   useEffect(() => {
     // Show scroll button after some scrolling
     const handleScroll = () => {
@@ -130,6 +130,9 @@ useEffect(() => {
               </div>
             </Col>
 
+            {/* <Col md={6} className="text-center">
+              <img src="" alt="Hero Animation" className="img-fluid hero-image animate-float" />
+            </Col> */}
             <Col md={6} className="text-center">
               <img src={heroImage} alt="Hero Animation" className="img-fluid hero-image animate-float" />
             </Col>
@@ -221,10 +224,13 @@ useEffect(() => {
                 <p>We design and develop fully functional websites that are easy to use and are a great fit for your business.</p>
               </div>
               <div className="service-card">
-                <div className="icon">📱</div>
-                <h3>Mobile App Development</h3>
-                <p>We offer Mobile Apps Development and Digital Marketing services to expand your customer base.</p>
+                <div className="icon">🎓</div>
+                <h3>Learning Management System</h3>
+                <p>
+                  We design and develop powerful Learning Management Systems that make online education seamless, interactive, and efficient for both educators and learners.
+                </p>
               </div>
+
               <div className="service-card">
                 <div className="icon">👥</div>
                 <h3>HR Management</h3>
