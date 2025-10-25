@@ -153,7 +153,7 @@
 @media (max-width: 768px) {
   .custom-header {
     text-align: left;
-    min-height: 150px;
+    height: 10opx;
   }
 
   .navbar {

@@ -850,8 +850,7 @@
 /* Mobile fix */
 @media (max-width: 768px) {
   .policy-content {
-    padding: 40px 15px; /* reduced further */
-    gap: 30px; /* smaller gaps between blocks */
+    padding: 40px 15px; 
   }
 
   .section-header {
