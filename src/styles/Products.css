@@ -1,7 +1,7 @@
 /* ===== Products Banner Section ===== */
 .products-banner-section {
   position: relative;
-  background: url("https://www.silvertouch.ca/wp-content/uploads/2022/11/erp.png")
+  background: url("../assets//productBanner.png")
     center/cover no-repeat;
   color: #fff;
   min-height: 70vh;

@@ -90,7 +90,7 @@ function Contact() {
   return (
     <> 
       {/* Banner */}
-<section className="banner-section">
+{/* <section className="banner-section">
   <div className="banner-overlay">
     <div className="banner-content">
       <h1 className="fade-up">Contact Us</h1>
@@ -109,7 +109,7 @@ function Contact() {
 
     </div>
   </div>
-</section>
+</section> */}
 
 
       {/* Contact Form Section */}
