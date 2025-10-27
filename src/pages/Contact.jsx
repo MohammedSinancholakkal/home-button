@@ -57,7 +57,7 @@ function Contact() {
       emailjs
         .sendForm(
           "service_yycadpw", // ✅ YOUR SERVICE ID
-          "template_o644iin", // ✅ YOUR TEMPLATE ID
+          "template_qu9pq2e", // ✅ YOUR TEMPLATE ID
           formRef.current,   // ✅ The form reference
           "j1IRCKEALXFVA_Rmr" // ✅ PUBLIC KEY
         )
