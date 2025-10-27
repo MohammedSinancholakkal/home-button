@@ -1,11 +1,10 @@
-import React from "react";
-import "../styles/Contact.css";
-import { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from 'react';
+import '../styles/Contact.css';
 import emailjs from "@emailjs/browser";
 
-
 function Contact() {
-  const form = useRef();
+
+  const formRef = useRef(null);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -48,19 +47,19 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const validationErrors = validate();
-  
+
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       setSuccessMsg("");
     } else {
       setErrors({});
-  
+
       emailjs
         .sendForm(
-          "service_yycadpw", 
-          "template_qu9pq2e",
-          e.target,
-          "j1IRCKEALXFVA_Rmr"
+          "service_yycadpw", // ✅ YOUR SERVICE ID
+          "template_o644iin", // ✅ YOUR TEMPLATE ID
+          formRef.current,   // ✅ The form reference
+          "j1IRCKEALXFVA_Rmr" // ✅ PUBLIC KEY
         )
         .then(() => {
           setSuccessMsg("✅ Your message has been sent successfully!");
@@ -72,21 +71,20 @@ function Contact() {
             message: "",
           });
         })
-        .catch((error) => {
-          console.error("FAILED...", error.text);
-          setSuccessMsg("❌ Failed to send message. Please try again.");
+        .catch(() => {
+          setSuccessMsg("❌ Failed to send message. Please try again!");
         });
     }
   };
-  
 
   useEffect(() => {
-    const cards = document.querySelectorAll(".fade-in-up");
+    const cards = document.querySelectorAll('.fade-in-up');
+
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
+            entry.target.classList.add('visible');
             observer.unobserve(entry.target);
           }
         });
@@ -94,7 +92,8 @@ function Contact() {
       { threshold: 0.2 }
     );
 
-    cards.forEach((card) => observer.observe(card));
+    cards.forEach(card => observer.observe(card));
+
     return () => observer.disconnect();
   }, []);
 
@@ -106,15 +105,13 @@ function Contact() {
           <div className="banner-content">
             <h1 className="fade-up">Contact Us</h1>
             <p className="fade-up delay-1">
-              We’re here to help and answer any question you might have. Reach
-              out to us and we’ll respond as soon as we can.
+              We’re here to help and answer any question you might have.  
+              Reach out to us and we’ll respond as soon as we can.
             </p>
             <button
               className="fade-up delay-2 contact-btn"
               onClick={() => {
-                document
-                  .getElementById("contact-form-section")
-                  ?.scrollIntoView({ behavior: "smooth" });
+                document.getElementById('contact-form-section')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
               Get in Touch
@@ -128,16 +125,10 @@ function Contact() {
         <div className="container">
           <h2 className="form-title">Get in Touch</h2>
           <p className="form-subtitle">
-            We’d love to hear from you. Fill out the form below and we’ll
-            respond soon.
+            We’d love to hear from you. Fill out the form below and we’ll respond soon.
           </p>
 
-          <form
-            ref={form}
-            className="contact-form"
-            onSubmit={handleSubmit}
-            noValidate
-          >
+          <form ref={formRef} className="contact-form" onSubmit={handleSubmit} noValidate>
             <div className="row">
               <div className="col-md-6 mb-3">
                 <label>Name</label>
@@ -149,9 +140,7 @@ function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                 />
-                {errors.name && (
-                  <small className="error-text">{errors.name}</small>
-                )}
+                {errors.name && <small className="error-text">{errors.name}</small>}
               </div>
 
               <div className="col-md-6 mb-3">
@@ -164,9 +153,7 @@ function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                 />
-                {errors.email && (
-                  <small className="error-text">{errors.email}</small>
-                )}
+                {errors.email && <small className="error-text">{errors.email}</small>}
               </div>
             </div>
 
@@ -181,9 +168,7 @@ function Contact() {
                   value={formData.phone}
                   onChange={handleChange}
                 />
-                {errors.phone && (
-                  <small className="error-text">{errors.phone}</small>
-                )}
+                {errors.phone && <small className="error-text">{errors.phone}</small>}
               </div>
 
               <div className="col-md-6 mb-3">
@@ -196,9 +181,7 @@ function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                 />
-                {errors.subject && (
-                  <small className="error-text">{errors.subject}</small>
-                )}
+                {errors.subject && <small className="error-text">{errors.subject}</small>}
               </div>
             </div>
 
@@ -213,24 +196,107 @@ function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                 ></textarea>
-                {errors.message && (
-                  <small className="error-text">{errors.message}</small>
-                )}
+                {errors.message && <small className="error-text">{errors.message}</small>}
               </div>
             </div>
 
             <div className="text-center">
-              <button type="submit" className="submit-btn">
-                Send Message
-              </button>
+              <button type="submit" className="submit-btn">Send Message</button>
               {successMsg && <p className="success-text">{successMsg}</p>}
             </div>
           </form>
         </div>
       </section>
 
-      {/* Other content below remains unchanged */}
-      {/* Map, Info, CTA Sections */}
+      {/* Map Section */}
+      <section className="map-section d-flex gap-1">
+        <div className="map-left">
+          <div className="slash-shape"></div>
+          <div className="map-overlay">
+            <p className="address-text">
+              <i className="fa-solid fa-location-dot"></i>
+              No: 24 / 1701 , Suit No: 821 , <br /> Heiley Offices,
+              2nd Floor KC Arcade, Near TV Center,CSEZ P.O, <br />
+              Kakkanad, Ernakulam Kerala - 682037
+            </p>
+            <p className="desc ms-4" style={{ fontSize: '15px' }}>
+              We’d love to meet you. Drop by anytime Monday to Friday.
+            </p>
+            <div className="contact-info">
+              <p><i className="fa-solid fa-mobile-screen"></i>+91 9629794999</p>
+              <p><i className="fa-solid fa-phone"></i>+91 484-2977886</p>
+              <p><i className="fa-solid fa-envelope"></i>homebuttonpvtltd@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Google Map */}
+        <div className="map-right">
+          <iframe
+            title="Company Location"
+            src="https://www.google.com/maps?q=10.00878,76.34253&hl=es;z=17&output=embed"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+
+      {/* Contact Info Cards */}
+      <section className="info-section">
+        <div className="info-container">
+          <div className="info-card fade-in-up">
+            <i className="fa-solid fa-map-marker-alt"></i>
+            <h3>Our Location</h3>
+            <p className="footer-contact">
+              No 24/1701, Suit No: 821, Heiley offices 2nd floor            
+              KC Arcade, Near TV center,<br />
+              CSEZ P.O, Kakkanad, Eranakulam - 682037
+            </p>
+          </div>
+
+          <div className="info-card fade-in-up">
+            <i className="fa-solid fa-comment-dots main-icon"></i>
+            <h3>Contact Us</h3>
+            <p><i className="fa-solid fa-mobile-screen-button"></i> +91 9629794999</p>
+            <p><i className="fa-solid fa-phone"></i> +91 484-2977886</p>
+            <p><i className="fa-solid fa-envelope"></i> homebuttonpvtltd@gmail.com</p>
+            <p><i className="fa-regular fa-clock"></i> Mon - Fri, 9am - 6pm</p>
+          </div>
+
+          <div className="info-card fade-in-up">
+            <i className="fa-solid fa-share-nodes"></i>
+            <h3>Connect with Us On Social Media</h3>
+            <div className="social-icons-contact">
+              <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i className="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i className="fa-brands fa-youtube"></i></a>
+              <a href="#"><i className="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Footer Section */}
+      <section className="hero-section">
+        <div className="hero-content">
+          <div className="text-content">
+            <h2><span>Are you ready</span></h2>
+            <h1>Let’s Make Something <br /> Amazing Together</h1>
+            <button
+              className="hero-btn"
+              onClick={() => {
+                document.getElementById('contact-form-section')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
