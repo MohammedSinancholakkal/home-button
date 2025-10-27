@@ -9,7 +9,9 @@ import { Link } from "react-router-dom";
 import img1 from "../assets/imgnew1.png";
 import img2 from "../assets/imgnew2.png";
 import img4 from "../assets/imgnew4.png";
-
+import logo1 from "../assets/kumarMart.jpg";
+import logo2 from "../assets/kalafinserv1.png";
+import logo3 from "../assets/chillaSolutions.png";
 function Home() {
   const fullText = "Home Button";
   const [displayedText, setDisplayedText] = useState("");
@@ -141,30 +143,31 @@ useEffect(() => {
       </section>
 
       {/* brand section */}
-      <section className="trusted-section container mt-5">
+             {/* brand section */}
+             <section className="trusted-section container mt-5">
       <h2 className="heading">Trusted by companies around the globe</h2>
 
-      <div className="logo-slider">
+      <div className="logo-slider mb-5">
         <div className="logo-track mt-5">
           {/* Repeat all logos twice to make it loop seamlessly */}
           {[...Array(2)].map((_, i) => (
             <React.Fragment key={i}>
               <div className="logo-item">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Celso_logotipo_blue.jpg"
-                  alt="celsa "
+                  src={logo1}
+                  alt="Kumar Mart"
                 />
               </div>
               <div className="logo-item">
                 <img
-                  src="https://brandeps.com/logo-download/S/Shimano-logo-01.png"
-                  alt="shimano"
+                  src={logo2}
+                  alt="Kala Finserv"
                 />
               </div>
               <div className="logo-item">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUOCkRJbhFJu5OJ8Dg3t4jRXfxborMwRcn9Q&s"
-                  alt="Shimano"
+                  src={logo3}
+                  alt="chilla solutions"
                 />
               </div>
               <div className="logo-item">

@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import "../styles/Services.css";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+import card1 from '../assets/card1.jpg';
+import card2 from '../assets/card2.webp';
+import card3 from '../assets/card3.jpeg';
+import card4 from '../assets/card4.png';
 
 
 function Services() {
@@ -168,7 +172,7 @@ function Services() {
   </div>
        <div class="software-card">
           <img
-            src="https://img.freepik.com/premium-photo/erp-enterprise-resource-planning-software-modish-business_31965-186236.jpg?semt=ais_hybrid&w=740&q=80"
+            src={card1}
             alt="ERP Software"
             class="software-image"
           />
@@ -185,7 +189,7 @@ function Services() {
 
         <div class="software-card">
           <img
-            src="https://systemintegration.in/wp-content/uploads/2024/02/banner-crm-software-development-bmv-system-integration.webp"
+            src={card2}
             alt="CRM Software"
             class="software-image"
           />
@@ -201,7 +205,7 @@ function Services() {
 
         <div class="software-card mt-3" >
           <img
-            src="https://2.wlimg.com/product_images/bc-full/2022/7/176278/automation-software-solutions-1657619471-1452819.jpeg"
+            src={card3}
             alt="Inventory Software"
             class="software-image"
           />
@@ -215,7 +219,7 @@ function Services() {
 
         <div class="software-card mt-3">
           <img
-            src="https://givewp.com/wp-content/uploads/edd/2021/10/Salesforce-addon-featured-image.png"
+            src={card4}
             alt="HR Software"
             class="software-image"
           />

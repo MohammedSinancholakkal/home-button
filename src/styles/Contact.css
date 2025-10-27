@@ -1,19 +1,23 @@
 .banner-section {
   position: relative;
   width: 100%;
-  height: 70vh;
-  background: url("https://t4.ftcdn.net/jpg/05/24/03/99/360_F_524039911_SJfffOLKTk1HZvTPyF9vv1FN6oCipyVi.jpg") center/cover no-repeat;
+  height: 80vh;
+  background: url("../assets/contact1.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding-left: 8%;
   overflow: hidden;
   transition: all 0.4s ease;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 /* Overlay for readability */
 .banner-overlay {
   width: 100%;
+  background: rgba(0, 0, 0, 0.6);
   height: 100%;
   display: flex;
   align-items: center;
@@ -40,7 +44,7 @@
 
 /* Paragraph */
 .banner-content p {
-  color: #dddddd;
+  color: #ffffff;
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 25px;
@@ -50,7 +54,7 @@
 /* Button */
 .contact-btn {
   background: linear-gradient(135deg, #586bc0, #8b9bff);
-  color: #fff;
+  color: #ffffff;
   border: none;
   padding: 12px 30px;
   border-radius: 30px;
@@ -58,12 +62,21 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .contact-btn:hover {
   background: linear-gradient(135deg, #8b9bff, #586bc0);
   transform: translateY(-3px);
   box-shadow: 0 0 10px rgba(121, 134, 203, 0.6);
 }
+
+
+.banner-section {
+  padding-left: 0;
+}
+.banner-content {
+  margin-left: 8%;
+}
+
+
 
 /* Fade-Up Animation */
 @keyframes fadeUp {
@@ -87,30 +100,21 @@
   animation-delay: 0.6s;
 }
 
-/* ========================================
-   🌐 Responsive Design — Balanced Layout
-======================================== */
-
 /* Tablets */
 @media (max-width: 992px) {
   .banner-section {
-    height: 60vh;
+    height: auto;
+    padding: 90px 5%;
     justify-content: center;
     text-align: center;
-    padding: 0 5%;
-    background-position: center top;
   }
-
-
 
   .banner-content {
     max-width: 90%;
   }
-
   .banner-content h1 {
     font-size: 2.4rem;
   }
-
   .banner-content p {
     font-size: 1rem;
   }
@@ -119,27 +123,23 @@
 /* Mobile large */
 @media (max-width: 768px) {
   .banner-section {
-    height: 50vh;
-    background-size: cover; /* ✅ keep full and clean */
-    background-position: center center;
+    height: auto;
+    padding: 80px 5%;
     justify-content: center;
     text-align: center;
-    padding: 0 1.5rem;
   }
 
-
-
+  .banner-overlay {
+    background:none;
+  }
   .banner-content h1 {
     font-size: 1.9rem;
     margin-bottom: 10px;
   }
-
   .banner-content p {
     font-size: 0.9rem;
-    line-height: 1.5;
     margin-bottom: 20px;
   }
-
   .contact-btn {
     padding: 9px 22px;
     font-size: 0.85rem;
@@ -149,23 +149,18 @@
 /* Mobile medium and small */
 @media (max-width: 480px) {
   .banner-section {
-    height: 45vh;
-    background-size: cover;
-    background-position: center;
+    height: auto;
+    padding: 70px 5%;
     justify-content: center;
     text-align: center;
-    padding: 1.2rem;
   }
-
 
   .banner-content h1 {
     font-size: 1.5rem;
   }
-
   .banner-content p {
     font-size: 0.85rem;
   }
-
   .contact-btn {
     padding: 8px 18px;
     font-size: 0.8rem;
@@ -176,17 +171,17 @@
 @media (max-width: 360px) {
   .banner-section {
     height: auto;
-    padding: 1.5rem 1rem;
+    padding: 65px 5%;
+    justify-content: center;
+    text-align: center;
   }
 
   .banner-content h1 {
     font-size: 1.3rem;
   }
-
   .banner-content p {
     font-size: 0.8rem;
   }
-
   .contact-btn {
     font-size: 0.75rem;
     padding: 7px 16px;
@@ -195,13 +190,12 @@
 
 
 
-
   /* get started */
 
   
   .hero-section {
     width: 100%;
-    background: url("https://omlogisticssupplychain.com/images/Contact-Us-Banner.svg") center/cover no-repeat;
+    background: url("../assets/contactus.webp") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -306,8 +300,8 @@
 ================================================ */
 .map-section {
   display: flex;
-  width: 100%;
-  height: 500px;
+  max-width: 100%;
+  height: 400px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   margin: 5px;
@@ -359,11 +353,73 @@
 .map-right iframe {
   width: 100%;
   height: 100%;
-  border: none;
+  border: none; 
   border-radius: 0 12px 12px 0;
   object-fit: cover;
   transition: all 0.3s ease;
 }
+.map-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.map-title i {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.address-text {
+  line-height: 1.4rem;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0;
+}
+
+.contact-info i {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.address-text {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.4rem;
+}
+
+.address-text i {
+  font-size: 1.2rem;
+  margin-top: 3px; 
+  /* pushes the icon slightly down so it aligns to first text line */
+}
+
+
+.info-card p i {
+  font-size: 0.99rem; /* Smaller size */
+  width: 16px; /* Keeps alignment tidy */
+  text-align: center;
+}
+
+.info-card p {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Reduced space for compact look */
+  margin: 4px 0;
+}
+
+
+
+
 
 
 /* ================================================
@@ -375,95 +431,78 @@
   .map-section {
     flex-direction: column;
     height: auto;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0;
-  }
-
-  .map-left,
-  .map-right {
-    flex: 1 1 100%;
-    width: 90%;
-    height: 450px;
-    margin: 8px 0;
-    border-radius: 12px;
-  }
-
-  .map-left::before {
-    border-radius: 12px;
-  }
-
-  .map-overlay {
-    text-align: center;
-    padding: 25px;
-  }
-
-  .map-overlay h2 {
-    font-size: 1.6rem;
-  }
-
-  .map-overlay p {
-    font-size: 0.95rem;
-  }
-
-  .map-overlay .desc {
-    font-size: 0.9rem;
-  }
-
-  .map-right iframe {
-    border-radius: 12px;
-    height: 100%;
-  }
-}
-
-/* Mobile Large (≤ 768px) */
-@media (max-width: 768px) {
-  .map-section {
-    margin: 10px 0;
+    gap: 16px;
+    padding: 20px 0;
   }
 
   .map-left,
   .map-right {
     width: 95%;
-    height: 420px;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .map-left {
+    padding: 25px 20px;
   }
 
   .map-overlay {
+    text-align: left;
+    width: 100%;
+  }
+
+  .address-text {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .contact-line,
+  .contact-info p {
+    justify-content: flex-start;
+  }
+
+  .map-right iframe {
+    height: 350px;
+    border-radius: 12px;
+  }
+}
+
+
+/* Mobile Large (≤ 768px) */
+@media (max-width: 768px) {
+  .map-left,
+  .map-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .map-left {
     padding: 20px;
   }
 
   .map-overlay h2 {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
   }
 
-  .map-overlay p {
+  .map-overlay p,
+  .contact-info p {
     font-size: 0.9rem;
-    line-height: 1.5;
-  }
-
-  .map-overlay .desc {
-    font-size: 0.85rem;
+    line-height: 1.4;
   }
 
   .map-right iframe {
-    height: 100%;
-    width: 100%;
+    height: 320px;
   }
 }
+
 
 /* Mobile Medium (≤ 576px) */
 @media (max-width: 576px) {
   .map-section {
-    margin: 10px 0;
+    gap: 12px;
   }
 
-  .map-left,
-  .map-right {
-    width: 95%;
-    height: 380px;
-  }
-
-  .map-overlay {
+  .map-left {
     padding: 18px;
   }
 
@@ -473,26 +512,16 @@
 
   .map-overlay p {
     font-size: 0.85rem;
-    line-height: 1.4;
-  }
-
-  .map-overlay .desc {
-    font-size: 0.8rem;
   }
 
   .map-right iframe {
-    height: 100%;
+    height: 300px;
   }
 }
 
-/* Very Small (≤ 400px) */
-@media (max-width: 400px) {
-  .map-left,
-  .map-right {
-    width: 95%;
-    height: 340px;
-  }
 
+/* Mobile Small (≤ 400px) */
+@media (max-width: 400px) {
   .map-overlay {
     padding: 15px;
   }
@@ -501,11 +530,18 @@
     font-size: 1.1rem;
   }
 
-  .map-overlay p,
-  .map-overlay .desc {
-    font-size: 0.75rem;
+  .map-overlay p {
+    font-size: 0.78rem;
+  }
+
+  .map-right iframe {
+    height: 260px;
   }
 }
+
+
+
+
 
 
   /* contact form */
@@ -633,18 +669,21 @@
     flex-wrap: wrap;
     max-width: 1200px; /* increased for wider layout */
     margin: 0 auto;
+    
   }
   
   /* Gradient Cards */
   .info-card {
     background: linear-gradient(135deg, #586bc0, #7986cb);
     color: #ffffff;
-    padding: 50px 40px; /* slightly more padding */
+    padding: 50px ; /* slightly more padding */
     border-radius: 16px;
     flex: 1 1 360px; /* increased min width */
     min-width: 340px; /* previously 280px */
     transition: all 0.3s ease;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    max-height: 300px;
+    
   }
   
   .info-card:hover {
@@ -656,20 +695,47 @@
     font-size: 2.2rem;
     color: #ffffff;
     margin-bottom: 15px;
+    text-align: center;
   }
   
   .info-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 12px;
     color: #ffffff;
   }
   
   .info-card p {
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     color: #f3f3f3;
     margin-bottom: 5px;
   }
+  .info-card {
+    text-align: center; /* Center everything inside */
+  }
+  
+  /* Optional: clean alignment between icons and text */
+  .info-card p {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 8px; /* space between icon and text */
+    margin: 4px 0;
+  }
+  
+  /* Adjust icon size inside paragraphs */
+  .info-card p i {
+    font-size: 0.85rem;
+  }
+  
+  /* Main top icon slightly centered and spaced */
+  .info-card .main-icon {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    display: block;
+    width: 100%;
+  }
+  
   
   .info-btn {
     margin-top: 15px;
@@ -713,6 +779,35 @@
 .social-icons-contact a:hover svg {
   transform: scale(1.05);
 }
+
+
+
+/* Smaller main icon */
+.info-card i.fa-share-nodes {
+  font-size: 1.9rem; /* previously probably 2+ */
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+
+/* Social icons styling */
+.social-icons-contact a i {
+  font-size: 1.8rem; /* reduce icon size */
+  margin: 0 6px; /* tighten spacing */
+}
+
+/* Optional: make the icons feel balanced */
+.social-icons-contact a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Reduce card padding to match others */
+.info-card {
+  padding: 15px 18px;
+}
+
+
 
   
   /* Responsive */

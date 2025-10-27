@@ -1,15 +1,15 @@
 import { useEffect } from "react";
 import "../styles/Aboutus.css";
-import aboutusImg1 from "../assets/aboutusimg1.jpg";
+import aboutusImg1 from "../assets/aboutusimg1.webp";
 import whychooseImg from "../assets/whychooseimg1.jpg";
 import { Container, Row, Col } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import React from "react";
-import { Link, Links } from "react-router-dom";
+import { Link } from "react-router-dom";
+import logo1 from "../assets/kumarMart.jpg";
+import logo2 from "../assets/kalafinserv1.png";
+import logo3 from "../assets/chillaSolutions.png";
 
-// import works1 from "../assets/works1.jpg";
-// import works2 from "../assets/works2.jpg";
-// import works3 from "../assets/works3.jpg";
 
 
 function AboutUs() {
@@ -66,7 +66,7 @@ function AboutUs() {
     <div className="about-image reveal-on-scroll delay-1">
       <img
         src={aboutusImg1}
-        alt="Team Discussion"
+        alt="Team Discussion" 
         className="about-img"
       />
     </div>
@@ -211,20 +211,20 @@ function AboutUs() {
             <React.Fragment key={i}>
               <div className="logo-item">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Celso_logotipo_blue.jpg"
-                  alt="celsa "
+                  src={logo1}
+                  alt="Kumar Mart"
                 />
               </div>
               <div className="logo-item">
                 <img
-                  src="https://brandeps.com/logo-download/S/Shimano-logo-01.png"
-                  alt="shimano"
+                  src={logo2}
+                  alt="Kala Finserv"
                 />
               </div>
               <div className="logo-item">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUOCkRJbhFJu5OJ8Dg3t4jRXfxborMwRcn9Q&s"
-                  alt="Shimano"
+                  src={logo3}
+                  alt="chilla solutions"
                 />
               </div>
               <div className="logo-item">

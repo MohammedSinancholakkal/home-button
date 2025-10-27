@@ -1,5 +1,5 @@
 .custom-header {
-  background: linear-gradient(135deg, #01020b 0%, #080a24 100%);
+  background: linear-gradient(135deg, #06081b 0%, #0a0f2e 100%);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   position: sticky;
   top: 0;
@@ -16,6 +16,8 @@
   color: #ffffff;
   text-shadow: 0 0 5px #7986cb, 0 0 10px #5c6bc0;
   transition: all 0.3s ease;
+  width: 200px;
+  height: 60px;
 }
 
 .brand-glow:hover {
@@ -36,6 +38,22 @@
   color: #7986cb;
   text-shadow: 0 0 5px #7986cb;
 }
+
+.navbar .brand-glow img {
+  height: 55px; /* Adjust as you like */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.navbar .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
 
 /* Button glow (globe button) */
 .btn-glow {
@@ -149,140 +167,128 @@
   font-size: 17px;
 }
 
-/* ✅ Responsive for mobile */
+/* ✅ Mobile Responsive Fix 🔥 */
 @media (max-width: 768px) {
+
+  /* Header & Navigation */
   .custom-header {
-    text-align: left;
-    height: 10opx;
+    height: 80px;
+    padding: 0.5rem 0;
   }
 
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .container-fluid {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 !important;
   }
 
   .navbar-brand {
-    flex: 1;
-    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
   }
 
   .navbar-toggler {
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-    background-color: #7986cb !important;
-    color: white !important;
-  }
-
-  .navbar-toggler:focus,
-  .navbar-toggler:active {
-    outline: none !important;
-    box-shadow: none !important;
-    border: none !important;
-  }
-
-  .custom-header .brand-glow {
-    font-size: 1.3rem;
-    text-align: left;
-  }
-
-  /* Collapsed menu background */
-  .navbar-collapse {
-    margin-top: 0.5rem;
-    background: linear-gradient(135deg, #06081b 0%, #0a0f2e 100%);
-    border-radius: 8px;
-    padding: 0.5rem 1rem;
-    text-align: left;
-    justify-content: flex-start !important;
-    align-items: flex-start !important;
-  }
-
-  .navbar-nav {
-    width: 100%;
-    text-align: left;
-    align-items: flex-start !important;
-  }
-
-  .navbar-nav .nav-item {
-    width: 100%;
-    text-align: left;
-  }
-
-  .nav-link-glow {
-    width: 100%;
-    text-align: left;
-    margin: 0.4rem 0;
-    padding-left: 0.25rem;
-  }
-
-  /* ✅ Globe button aligns left in mobile */
-  .btn-glow {
-    align-self: flex-start;
-    width: auto;
-    margin-left: 0;
-    margin-top: 0.5rem; 
-    text-align: left;
+    margin-left: auto !important;
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
   }
 
-  /* If globe button is inside navbar-nav */
-  .navbar-nav .btn-glow {
-    width: 100%;
-    justify-content: flex-start;
+  .navbar .brand-glow img {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* SPACE TIGHTENING */
+  .policy-content {
+    padding: 15px 8px;
+  }
+
+  .section-header {
+    margin-bottom: 8px;
+  }
+
+  .policy-block {
+    gap: 6px !important;
+    margin-bottom: 8px !important;
+    padding: 0;
+  }
+
+  .policy-block .policy-image {
+    order: -1;
+  }
+
+  .policy-block .policy-image img {
+    max-width: 88%;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+
+  .policy-block .policy-text h3 {
+    font-size: 1.25rem;
+  }
+
+  .policy-block .policy-text p {
+    font-size: 0.93rem;
+    line-height: 1.45;
+  }
+
+  /* Reduce animation push-down space */
+  .policy-block,
+  .policy-block .policy-text,
+  .policy-block .policy-image {
+    transform: translateY(10px);
+  }
+
+  /* Hide shapes on mobile */
+  .floating-shape {
+    display: none !important;
   }
 }
-
-/* 🌈 Gradient Button */
-.btn-gradient {
-  background: linear-gradient(90deg, #5c6bc0, #7986cb);
-  border: none;
-  padding: 8px 18px;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-  font-weight: 500;
+/* Dropdown background & link styling */
+.navbar-collapse {
+  background: linear-gradient(135deg, #06081b 0%, #0a0f2e 100%);
+  padding: 12px 0;
+  border-radius: 0 0 8px 8px;
 }
 
-.btn-gradient:hover {
-  box-shadow: 0 0 12px rgba(121, 134, 203, 0.7);
-  transform: translateY(-2px);
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  padding: 12px 20px;
+  font-weight: 600;
 }
 
-/* 🔍 Search Bar Styling */
-.search-box {
-  position: relative;
+/* Hover effect: softer glow */
+.navbar-nav .nav-link:hover {
+  color: #dfe7ff !important;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
 }
 
-.search-input {
-  padding: 8px 14px 8px 36px;
-  border-radius: 25px;
-  border: 1px solid #7986cb;
-  background: #f7f8ff;
-  color: #333;
-  font-family: "Poppins", sans-serif;
-  font-style: italic;
-  outline: none;
-  transition: all 0.3s ease;
+/* Remove ugly default outline on open */
+.navbar-toggler:focus {
+  box-shadow: none !important;
 }
 
-.search-input:focus {
+/* Default toggle button */
+.navbar-toggler {
+  background-color: #7986cb !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+/* When menu is opened */
+.navbar-toggler[aria-expanded="true"] {
+  background-color: #5c6bc0 !important; /* slightly darker for visual feedback */
+  color: #ffffff !important;
   box-shadow: 0 0 10px #7986cb;
-  border-color: #5c6bc0;
 }
-
-.search-icon {
-  position: absolute;
-  left: 12px;
-  color: #5c6bc0;
-  font-size: 1rem;
-  pointer-events: none;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .search-input {
-    width: 150px;
-  }
-}
- 

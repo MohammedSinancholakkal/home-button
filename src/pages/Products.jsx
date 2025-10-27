@@ -1,6 +1,20 @@
 import React from 'react'
 import '../styles/Products.css'
 import { Link } from 'react-router-dom'
+import erp1 from '../assets/erpimg1.png'
+import erp2 from '../assets/erpimg2.webp'
+import erp3 from '../assets/eroimg3.jpg'
+import crm1 from '../assets/crmimg1.png'
+import crm2 from '../assets/crmimg2.webp'
+import crm3 from '../assets/crmimg3.jpg'
+import hrm1 from '../assets/hrmimg1.jpg'
+import hrm2 from '../assets/hrmimg2.jpg'
+import hrm3 from '../assets/hrmimg3.jpg'
+import lms1 from '../assets/lmsimg1.jpg'
+import lms2 from '../assets/lmsimg2.jpg'
+import lms3 from '../assets/lmsimg3.jpg'
+
+
 
 function Products() {
   return (
@@ -49,7 +63,7 @@ function Products() {
 
         <div className="blog-card">
           <img
-            src="https://scw-mag.com/wp-content/uploads/sites/7/2025/01/benefits-of-erp-systems-in-supply-chain-management-800x445.png"
+            src={erp1}
             alt="ERP"
             className="blog-image"
           />
@@ -66,7 +80,7 @@ function Products() {
 
         <div className="blog-card">
           <img
-            src="https://juntrax.com/blog/wp-content/uploads/2025/03/Untitled-design-9-1300x684.webp"
+            src={erp2}
             alt="ERP Analytics"
             className="blog-image"
           />
@@ -83,7 +97,7 @@ function Products() {
 
         <div className="blog-card">
           <img
-            src="https://www.bsquare.in/blog/wp-content/uploads/2023/07/erp-software-development.jpg"
+            src={erp3}
             alt="ERP Customization"
             className="blog-image"
           />
@@ -110,7 +124,7 @@ function Products() {
 
         <div className="blog-card">
           <img
-            src="https://blog-cdn.quarkly.io/2023/01/Best-CRM-Tools-for-Small-Businesses.png"
+            src={crm1}
             alt="CRM"
             className="blog-image"
           />
@@ -126,7 +140,7 @@ function Products() {
 
         <div className="blog-card">
           <img
-            src="https://www.posizionate.com/hs-fs/hubfs/hubspot%20customer%20relationship%20management.jpg?width=1440&name=hubspot%20customer%20relationship%20management.jpg"
+            src={crm2}
             alt="CRM Analytics"
             className="blog-image"
           />
@@ -142,7 +156,7 @@ function Products() {
 
         <div className="blog-card">
           <img
-            src="https://www.kickidler.com/assets/images/tickets/1101/1.jpg"
+            src={crm3}
             alt="CRM Team Collaboration"
             className="blog-image"
           />
@@ -171,7 +185,7 @@ function Products() {
 
         <div className="blog-card">
           <img
-            src="https://img.freepik.com/premium-photo/businesswoman-touching-human-resources-sign-hr-hrm-hrd-concept-which-is-staff-icons-human_926199-3844210.jpg"
+            src={hrm1}
             alt="HRM"
             className="blog-image"
           />
@@ -187,7 +201,7 @@ function Products() {
 
         <div className="blog-card">
           <img
-            src="https://www.zinghr.com/wp-content/uploads/2022/01/New-Project-73.jpg"
+            src={hrm2}
             alt="HRM Payroll"
             className="blog-image"
           />
@@ -203,7 +217,7 @@ function Products() {
 
         <div className="blog-card">
           <img
-            src="https://media.istockphoto.com/id/1467509880/photo/hrm-or-human-resource-management-businessman-holding-magnifier-select-and-accept-to-manager.jpg?s=612x612&w=0&k=20&c=jHwUtais34k9MQ_lq703k1jkF5JXBc10imCBsrT4bHY="
+            src={hrm3}
             alt="HRM Engagement"
             className="blog-image"
           />
@@ -231,7 +245,7 @@ function Products() {
 
         <div className="blog-card">
           <img
-            src="https://media.istockphoto.com/id/1451316016/photo/lms-learning-management-system-for-lesson-and-online-education-course-application-study-e.jpg?s=612x612&w=0&k=20&c=fRH0AanVP3IkjZtYNwJiyALkAvN3plLtrcPd1L2MrJo="
+            src={lms1}
             alt="LMS"
             className="blog-image"
           />
@@ -247,7 +261,7 @@ function Products() {
 
         <div className="blog-card">
           <img
-            src="https://www.empowerelearning.com/wp-content/uploads/2023/06/Homepage.jpg"
+            src={lms2}
             alt="LMS Analytics"
             className="blog-image"
           />
@@ -263,7 +277,7 @@ function Products() {
 
         <div className="blog-card">
           <img
-            src="https://png.pngtree.com/background/20250213/original/pngtree-online-learning-with-digital-education-platforms-picture-image_15918473.jpg"
+            src={lms3}
             alt="LMS Collaboration"
             className="blog-image"
           />

@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { Nav, Navbar, Button } from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
 import "../styles/Header.css";
+import hero1 from "../assets/heroLogo1.png";
 
 function Header({ searchQuery, setSearchQuery }) {
   const [expanded, setExpanded] = useState(false);
@@ -37,8 +38,11 @@ function Header({ searchQuery, setSearchQuery }) {
       className="custom-header px-4"
     >
       <section className="container-fluid d-flex align-items-center">
+        
         {/* Brand */}
-        <Navbar.Brand className="brand-glow">Home Button</Navbar.Brand>
+        <Navbar.Brand className="brand-glow">
+          <img src={hero1} alt="Logo" />
+        </Navbar.Brand>
 
         {/* Mobile Toggle */}
         <Navbar.Toggle
@@ -49,61 +53,58 @@ function Header({ searchQuery, setSearchQuery }) {
         {/* Collapsible Menu */}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto gap-4 text-center">
+            
             <NavLink
               to="/"
+              end
               className={({ isActive }) =>
                 `nav-link-glow ${isActive ? "active" : ""}`
               }
             >
               Home
             </NavLink>
+
             <NavLink
               to="/services"
+              end
               className={({ isActive }) =>
                 `nav-link-glow ${isActive ? "active" : ""}`
               }
             >
               Services
             </NavLink>
+
             <NavLink
               to="/aboutus"
+              end
               className={({ isActive }) =>
                 `nav-link-glow ${isActive ? "active" : ""}`
               }
             >
               About Us
             </NavLink>
+
             <NavLink
-              to="/products" 
+              to="/products"
+              end
               className={({ isActive }) =>
                 `nav-link-glow ${isActive ? "active" : ""}`
               }
             >
               Products
             </NavLink>
+
             <NavLink
               to="/contactus"
+              end
               className={({ isActive }) =>
                 `nav-link-glow ${isActive ? "active" : ""}`
               }
             >
               Contact
             </NavLink>
-          </Nav>
 
-          {/* <div className="ms-auto d-flex align-items-center gap-3 justify-content-center flex-wrap mt-3 mt-lg-0">
-           
-          <div className="search-box d-flex align-items-center">
-            <input
-              type="text"
-              className="search-input"
-              placeholder="Search..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-            <i className="fa-solid fa-magnifying-glass search-icon"></i>
-          </div>
-          </div> */}
+          </Nav>
         </Navbar.Collapse>
       </section>
     </Navbar>

@@ -1,9 +1,9 @@
 /* ===== Services Banner Section ===== */
 .services-banner-section {
   position: relative;
-  background: url("../assets/servicebanner1.avif") center/cover no-repeat;
+  background: url("../assets/service1.jpeg") center/cover no-repeat;
   color: #fff;
-  min-height: 70vh;
+  min-height: 80vh;
   display: flex;
   align-items: center; /* vertical center */
   justify-content: flex-start; /* align to left */

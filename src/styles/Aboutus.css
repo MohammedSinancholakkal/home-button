@@ -1,10 +1,10 @@
 /* ===== About Banner Section ===== */
 .about-banner-section {
     position: relative;
-    background: url('../assets/bannernew.jpg') center/cover no-repeat;
+    background: url('../assets/bannernew.webp') center/cover no-repeat;
     color: #ffffff;
     text-align: center;
-    min-height: 75vh; /* Balanced height for better center alignment */
+    min-height: 80vh; /* Balanced height for better center alignment */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,7 +65,7 @@
   }
 
   
- /* ===== About Section (Image Left, Text Right) ===== */
+/* ===== About Section (Image Left, Text Right) ===== */
 .about-section {
   background: #ffffff;
   color: #1a1a1a;
@@ -101,7 +101,7 @@
 
 /* Right Side Text */
 .about-text {
-  flex: 1.2; /* ✅ gives text slightly more width */
+  flex: 1.2;
   text-align: left;
 }
 
@@ -117,7 +117,7 @@
   color: #324766;
   font-size: 1.1rem;
   line-height: 1.8;
-  max-width: 750px; 
+  max-width: 750px;
 }
 
 /* ===== About Section Points ===== */
@@ -125,11 +125,11 @@
   list-style: none;
   margin-top: 20px;
   padding-left: 0;
-  max-width: 750px; /* ✅ matches paragraph width */
+  max-width: 750px;
 }
 
 .about-points li {
-  color: #586bc0; /* blue text */
+  color: #586bc0;
   font-size: 1.05rem;
   margin-bottom: 12px;
   position: relative;
@@ -138,13 +138,12 @@
   font-weight: bold;
 }
 
-/* Star icon before each line */
 .about-points li::before {
   content: "★";
   position: absolute;
   left: 0;
   top: 0;
-  color: #586bc0; /* blue star */
+  color: #586bc0;
   font-size: 1rem;
   line-height: 1.2;
 }
@@ -174,12 +173,15 @@
     max-width: 100%;
   }
 
+  /* ✅ Fix Image Size on Mobile */
   .about-img {
-    max-width: 420px;
-    height: 60vh;
-
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 }
+
 
 /* ===== Responsive Banner Text ===== */
 @media (max-width: 900px) {
@@ -202,8 +204,7 @@
     font-size: 0.9rem;
   }
 }
-
-
+ 
 
 
 /* ===== Why Choose Us Section ===== */
@@ -248,10 +249,10 @@
   font-weight: 500;
 }
 
-/* Tick Icon Before Each Line */
+/* Tick Icon */
 .why-points li::before {
   content: "✓";
-  color: #7986cb; /* ✅ your button color */
+  color: #7986cb;
   font-weight: 700;
   font-size: 1.1rem;
 }
@@ -259,9 +260,11 @@
 /* Image */
 .why-image {
   max-width: 90%;
+  width: 100%;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  object-fit: cover;
 }
 
 .why-image:hover {
@@ -288,6 +291,9 @@
 
   .why-image {
     margin-top: 25px;
+    width: 100%;
+    max-width: 100%;
+    height: auto; /* ✅ prevents awkward crop */
   }
 }
 
@@ -295,7 +301,7 @@
 @media (max-width: 768px) {
   .why-choose-section .row {
     display: flex;
-    flex-direction: column-reverse; /* 👈 puts image above text */
+    flex-direction: column-reverse;
   }
 
   .why-title {
@@ -303,8 +309,12 @@
   }
 
   .why-image {
-    order: -1; /* ensures image is shown first */
+    order: -1;
     margin-bottom: 30px;
+    width: 100%;
+    max-width: 100%;
+    height: auto; /* ✅ perfect scaling on phones */
+    object-fit: cover;
   }
 
   .why-points li {
@@ -418,8 +428,7 @@
 
 .logo-item img {
   height: 80px;               
-  width: auto;               
-  max-width: 150px;          
+  width: 200px;          
   object-fit: contain;
   transition: filter 0.3s ease, transform 0.3s ease;
 }
