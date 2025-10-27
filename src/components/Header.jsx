@@ -74,15 +74,7 @@ function Header({ searchQuery, setSearchQuery }) {
               Services
             </NavLink>
 
-            <NavLink
-              to="/aboutus"
-              end
-              className={({ isActive }) =>
-                `nav-link-glow ${isActive ? "active" : ""}`
-              }
-            >
-              About Us
-            </NavLink>
+           
 
             <NavLink
               to="/products"
@@ -92,6 +84,15 @@ function Header({ searchQuery, setSearchQuery }) {
               }
             >
               Products
+            </NavLink>
+            <NavLink
+              to="/aboutus"
+              end
+              className={({ isActive }) =>
+                `nav-link-glow ${isActive ? "active" : ""}`
+              }
+            >
+              About Us
             </NavLink>
 
             <NavLink

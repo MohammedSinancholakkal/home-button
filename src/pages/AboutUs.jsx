@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import logo1 from "../assets/kumarMart.jpg";
 import logo2 from "../assets/kalafinserv1.png";
 import logo3 from "../assets/chillaSolutions.png";
+import logo4 from "../assets/concepts.jpg";
+import logo5 from "../assets/yemaar.jpg";
 
 
 
@@ -229,22 +231,22 @@ function AboutUs() {
               </div>
               <div className="logo-item">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdUIhQCTegyuo6ZuTmrG8m2Qt73AXaVN9z2w&s"
+                  src={logo4}
                   alt="PureTech"
                 />
               </div>
               <div className="logo-item">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Chiesi_Logo_-_1.Primary_pantoni_RGB.jpg/1200px-Chiesi_Logo_-_1.Primary_pantoni_RGB.jpg"
+                  src={logo5}
                   alt="Chiesi"
                 />
               </div>
-              <div className="logo-item">
+              {/* <div className="logo-item">
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/3/32/BANK_ISLAM_LOGO.jpg"
                   alt="Bank Islam"
                 />
-              </div>
+              </div> */}
             </React.Fragment>
           ))}
         </div>

@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "../styles/Home.css";
 import heroImage from "../assets/new1.png";
-import leaderOne from "../assets/leader1.png";
-import leadertwo from "../assets/leader2.png";
-import leaderthree from "../assets/leader3.png";
+import leaderOne from "../assets/praveen.jpg";
+import leadertwo from "../assets/vishnu.jpg";
+import leaderthree from "../assets/anoop.jpg";
 import { Link } from "react-router-dom";
 import img1 from "../assets/imgnew1.png";
 import img2 from "../assets/imgnew2.png";
@@ -12,6 +12,11 @@ import img4 from "../assets/imgnew4.png";
 import logo1 from "../assets/kumarMart.jpg";
 import logo2 from "../assets/kalafinserv1.png";
 import logo3 from "../assets/chillaSolutions.png";
+import logo4 from "../assets/concepts.jpg";
+import logo5 from "../assets/yemaar.jpg";
+
+
+
 function Home() {
   const fullText = "Home Button";
   const [displayedText, setDisplayedText] = useState("");
@@ -143,8 +148,7 @@ useEffect(() => {
       </section>
 
       {/* brand section */}
-             {/* brand section */}
-             <section className="trusted-section container mt-5">
+      <section className="trusted-section container mt-5">
       <h2 className="heading">Trusted by companies around the globe</h2>
 
       <div className="logo-slider mb-5">
@@ -172,22 +176,22 @@ useEffect(() => {
               </div>
               <div className="logo-item">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdUIhQCTegyuo6ZuTmrG8m2Qt73AXaVN9z2w&s"
+                  src={logo4}
                   alt="PureTech"
                 />
               </div>
               <div className="logo-item">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Chiesi_Logo_-_1.Primary_pantoni_RGB.jpg/1200px-Chiesi_Logo_-_1.Primary_pantoni_RGB.jpg"
+                  src={logo5}
                   alt="Chiesi"
                 />
               </div>
-              <div className="logo-item">
+              {/* <div className="logo-item">
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/3/32/BANK_ISLAM_LOGO.jpg"
                   alt="Bank Islam"
                 />
-              </div>
+              </div> */}
             </React.Fragment>
           ))}
         </div>
@@ -425,12 +429,13 @@ useEffect(() => {
       <div className="leader-card">
         <img src={leaderOne} alt="Leader 1" className="leader-photo" />
         <div className="leader-info">
-          <h3>Nicolas Rousseau</h3>
-          <h4>Executive Vice President, Chief Digital Engineering & Manufacturing Officer</h4>
+          <h3>Praveen M P</h3>
+          <h4>Managing Director</h4>
           <p>
-            Nicolas Rousseau drives business for “intelligent industries” by integrating
-            product, software, data, and services. He leads a team that enables clients
-            to innovate business models and prepare for digital disruptions.
+          Praveen drives the overall vision and growth of Home Button Technologies. 
+He builds strategic partnerships, guides high-level decision making, and ensures 
+that every innovation aligns with delivering real value to customers and businesses.
+
           </p>
         </div>
       </div>
@@ -438,11 +443,13 @@ useEffect(() => {
       <div className="leader-card">
         <img src={leadertwo} alt="Leader 2" className="leader-photo" />
         <div className="leader-info">
-          <h3>Laura Martinez</h3>
-          <h4>Chief Technology Officer</h4>
+          <h3>Vishnu M</h3>
+          <h4>Head - Technology  </h4>
           <p>
-            Laura leads technology strategy and innovation, ensuring seamless integration
-            of AI and data-driven solutions to deliver maximum business value.
+          Vishnu architects the core technology landscape of the company. 
+He leads development teams, oversees digital transformation, and ensures 
+that every product meets top-tier performance, security, and usability standards.
+
           </p>
         </div>
       </div>
@@ -450,11 +457,13 @@ useEffect(() => {
       <div className="leader-card">
         <img src={leaderthree} alt="Leader 3" className="leader-photo" />
         <div className="leader-info">
-          <h3>James Lee</h3>
-          <h4>Chief Operations Officer</h4>
+          <h3>Anoop M R</h3>
+          <h4>Head - Marketing</h4>
           <p>
-            James oversees global operations, driving efficiency and innovation while
-            ensuring customer satisfaction and operational excellence.
+          Anoop leads brand strategy, market expansion, and digital outreach. 
+He crafts compelling narratives, drives sales alignment, and ensures the company 
+connects with the right audiences across all channels.
+
           </p>
         </div>
       </div>
